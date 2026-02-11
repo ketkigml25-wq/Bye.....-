@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faltu Advice Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1 {
+            color: #333;
+        }
+        #adviceBox {
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff9800;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🤡 Faltu Advice Generator 🤡</h1>
+    <div id="adviceBox">Click the button to get useless advice!</div>
+    <button onclick="generateAdvice()">Give Me Faltu Advice</button>
+
+    <script>
+        const adviceList = [
+            "Drink water while swimming to stay hydrated.",
+            "If you're late, just walk slower so it feels intentional.",
+            "Always blink twice before making big decisions.",
+            "Save money by not spending it.",
+            "If life gives you lemons, ask for salt too.",
+            "To avoid failure, simply succeed.",
+            "Sleep faster to save time.",
+            "Talk to yourself for expert advice.",
+            "If confused, just be confident.",
+            "Charge your phone before it dies. Revolutionary."
+        ];
+
+        function generateAdvice() {
+            const randomIndex = Math.floor(Math.random() * adviceList.length);
+            document.getElementById("adviceBox").innerText = adviceList[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
